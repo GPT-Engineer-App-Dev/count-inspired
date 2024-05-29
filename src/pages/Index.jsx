@@ -48,13 +48,13 @@ const Index = () => {
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <VStack spacing={4}>
-        <Box bg="gray.800" color="white" p={4} borderRadius="md" textAlign="center" width="100%">
+        <Box bg="brand.900" color="brand.100" p={4} borderRadius="md" textAlign="center" width="100%">
           <Text fontSize="4xl" fontFamily="monospace">{formatTime(time)}</Text>
         </Box>
         <HStack spacing={4}>
-          <Button colorScheme="teal" onClick={startStop}>{isRunning ? "Stop" : "Start"}</Button>
-          <Button colorScheme="yellow" onClick={splitReset}>{isRunning ? "Split" : "Reset"}</Button>
-          <Button colorScheme="red" onClick={toggleOnOff}>On/Off</Button>
+          <Button colorScheme="brand" variant="solid" onClick={startStop}>{isRunning ? "Stop" : "Start"}</Button>
+          <Button colorScheme="brand" variant="outline" onClick={splitReset}>{isRunning ? "Split" : "Reset"}</Button>
+          <Button colorScheme="brand" variant="ghost" onClick={toggleOnOff}>On/Off</Button>
         </HStack>
         {splits.length > 0 && (
           <VStack spacing={2} align="stretch" width="100%">
